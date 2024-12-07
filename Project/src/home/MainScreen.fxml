@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" style="-fx-background-color: #02030A;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.MainScreenController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #05071F;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="profilePicImageView" fitHeight="73.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/jimmy-fallon.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="50.0" />
+               </VBox.margin></ImageView>
+            <Label fx:id="userFullNameLabel" text="Account" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnOverview" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Overview" textFill="#e7e5e5">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Home_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnAccounts" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#accountsStart" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Manage Accounts">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Xbox_Menu_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnTransactions" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#transactionsStart" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Transactions">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Box_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnSpending" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#spendingStart" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Spending">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Box_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnBudget" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#budgetStart" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Budget">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Box_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnSettings" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#settingsStart" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Settings">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Slider__32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnSignout" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#signOut" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Sign Out">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Sign_Out_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <StackPane layoutX="258.0" prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;">
+         <children>
+            <Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0">
+               <children>
+                  <Label layoutX="57.0" layoutY="25.0" text="Overview" textFill="#e7e5e5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" layoutX="21.0" layoutY="72.0" prefHeight="147.0" prefWidth="308.0" spacing="50.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="147.0" prefWidth="180.0">
+                           <children>
+                              <Label fx:id="totalBalanceLabel" alignment="CENTER" prefHeight="38.0" prefWidth="155.0" text="22000" textFill="#2a73ff">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Money" textFill="#e7e5e5" />
+                              <Label fx:id="totalDebtLabel" alignment="CENTER" prefHeight="38.0" prefWidth="183.0" text="-22000" textFill="#2a73ff">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Total Debt" textFill="#e7e5e5" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="147.0" prefWidth="113.0">
+                           <children>
+                              <Label fx:id="numAccountsLabel" text="1500" textFill="#26bfbc">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Accounts" textFill="#e7e5e5" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <ScrollPane layoutX="14.0" layoutY="232.0" prefHeight="320.0" prefWidth="746.0" stylesheets="@style.css">
+                     <content>
+                        <VBox fx:id="pnItems" prefHeight="318.0" prefWidth="744.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <children>
+                              <TableView fx:id="accountTableView" opacity="0.83" prefHeight="320.0" prefWidth="761.0">
+                                <columns>
+                                  <TableColumn fx:id="numAccountsCol" prefWidth="91.0" text="#" />
+                                  <TableColumn fx:id="accountTypeCol" prefWidth="177.0" text="Account Type" />
+                                    <TableColumn fx:id="issuerCol" prefWidth="225.0" text="Account Name" />
+                                    <TableColumn fx:id="balanceCol" prefWidth="240.0" text="Balance" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                  <HBox alignment="CENTER_LEFT" layoutX="355.0" layoutY="8.0" prefHeight="222.0" prefWidth="430.0" spacing="50.0">
+                     <children>
+                        <TableView fx:id="alertsTableView" opacity="0.83" prefHeight="222.0" prefWidth="400.0">
+                           <columns>
+                              <TableColumn fx:id="alertTypeCol" prefWidth="60.0" text="Bill Type" />
+                              <TableColumn fx:id="alertIssuerCol" prefWidth="118.0" text="Account Name" />
+                              <TableColumn fx:id="alertBalanceCol" minWidth="3.0" prefWidth="117.0" text="Balance" />
+                              <TableColumn fx:id="alertDueDateCol" minWidth="9.0" prefWidth="104.0" text="Due Date" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+   <effect>
+      <DropShadow color="#1b1eeb" />
+   </effect>
+</AnchorPane>
